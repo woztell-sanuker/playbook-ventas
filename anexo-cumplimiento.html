@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<title>Anexo A · Cumplimiento · Playbook de ventas</title>
+<style>
+:root{
+  --bg:#ffffff;--ink:#17262b;--mut:#5a6a6f;--line:#d8dfe1;--soft:#f4f7f7;
+  --p:#185359;--s:#2B7E6E;--v:#4B145F;
+  --ps:#e7f0f0;--vs:#f2ebf5;--on:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0e1618;--ink:#e4ecee;--mut:#9db0b4;--line:#2b3b40;--soft:#152124;
+    --p:#7fc6cb;--s:#74c7b2;--v:#cfa3e0;
+    --ps:#143033;--vs:#2b1b33;--on:#0e1618;
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;overflow-x:hidden}
+a{color:var(--p)}
+p{margin:0 0 .9em}
+ul,ol{margin:0 0 .9em;padding-left:1.3em}
+li{margin:.3em 0}
+strong{font-weight:650}
+h1,h2,h3,h4{margin:0;line-height:1.2;text-wrap:balance}
+
+/* Navegación */
+.nav{position:fixed;inset:0 auto 0 0;width:236px;padding:28px 14px 24px 20px;border-right:1px solid var(--line);background:var(--bg);overflow-y:auto;z-index:10}
+.nav .brand{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin:0 0 16px 8px}
+.nav a{display:flex;gap:10px;align-items:baseline;padding:7px 8px;border-left:2px solid transparent;color:var(--mut);text-decoration:none;font-size:.9rem;line-height:1.3}
+.nav a .n{flex:0 0 1.6em;font-variant-numeric:tabular-nums;font-weight:650;color:var(--p)}
+.nav a:hover{color:var(--ink)}
+.nav a.on{color:var(--ink);border-left-color:var(--p);background:var(--soft);font-weight:600}
+.nav a.ext{margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:12px}
+main{margin-left:236px;padding:0 44px;min-width:0}
+.wrap{max-width:900px;margin:0 auto}
+
+/* Portada */
+.cover{padding:80px 0 44px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--s);font-weight:650;margin:0 0 18px}
+h1{font-size:clamp(1.9rem,4.6vw,3rem);font-weight:700;letter-spacing:-.02em}
+h1 .v{color:var(--v)}
+.cover .sub{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--mut);max-width:36em;margin:18px 0 0}
+.cover .back{margin-top:22px;font-size:.95rem}
+
+/* Secciones */
+.sec{padding:56px 0 20px;border-bottom:1px solid var(--line);scroll-margin-top:8px}
+.sec>header{margin-bottom:24px}
+.num{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--s);font-weight:650;margin:0 0 8px}
+h2{font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:680;letter-spacing:-.015em;max-width:24em}
+h3{font-size:1.2rem;font-weight:650;margin:32px 0 10px;max-width:34em}
+.txt{max-width:44em}
+.big{font-size:1.15rem;font-weight:600;max-width:40em}
+.note{font-size:.88rem;color:var(--mut);margin:10px 0 0;max-width:46em}
+.quote{border-left:3px solid var(--v);padding:4px 0 4px 18px;margin:18px 0;max-width:44em}
+.quote .k{color:var(--v)}
+.k{font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);font-weight:650;margin:0 0 6px}
+.ideas{max-width:44em}
+.ideas li{margin:.6em 0}
+.ref{font-size:.82em;color:var(--mut);text-decoration:none;font-weight:650}
+
+/* Exhibits */
+.ex{margin:26px 0 10px;padding:18px 0 0;border-top:2px solid var(--ink);min-width:0}
+.ex figcaption{margin-bottom:14px}
+.exn{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);font-weight:650;margin-bottom:4px}
+.ext{display:block;font-size:1.12rem;font-weight:650;line-height:1.3;max-width:38em}
+.src{font-size:.82rem;color:var(--mut);margin:12px 0 0;padding-top:8px;border-top:1px solid var(--line)}
+
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+thead th{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:650;background:var(--soft);border-bottom:1px solid var(--ink)}
+tbody tr:last-child>*{border-bottom:0}
+tbody th{font-weight:650}
+.w6{min-width:900px}.w5{min-width:800px}.w4{min-width:680px}.w3{min-width:560px}
+td.grp{font-weight:650;background:var(--soft);white-space:nowrap}
+td.grp span{display:block;font-weight:400;font-size:.84rem;color:var(--mut);white-space:normal}
+td.to{background:var(--ps);font-weight:600}
+td.cap{background:var(--vs)}
+td.no{color:var(--mut);text-decoration:line-through;text-decoration-thickness:1px}
+td.si{background:var(--ps);font-weight:600}
+th.cv{color:var(--v)}
+.refs th,.refs td{font-size:.86rem}
+.refs td{overflow-wrap:anywhere}
+.refs td.n{font-weight:700;color:var(--p);font-variant-numeric:tabular-nums}
+
+footer{padding:26px 0 64px;font-size:.88rem;color:var(--mut)}
+footer p{margin:0 0 4px}
+
+@media screen and (max-width:1023px){
+  .nav{position:sticky;inset:0 0 auto 0;width:auto;display:flex;gap:2px;padding:0 8px;border-right:0;border-bottom:1px solid var(--line);overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:none}
+  .nav::-webkit-scrollbar{display:none}
+  .nav .brand{display:none}
+  .nav a{flex:0 0 auto;border-left:0;border-bottom:2px solid transparent;padding:12px 10px;gap:6px}
+  .nav a .n{flex:0 0 auto}
+  .nav a.on{border-bottom-color:var(--p);background:transparent}
+  .nav a.ext{margin-bottom:0;border-bottom:2px solid transparent;padding-bottom:12px}
+  main{margin-left:0;padding:0 24px}
+  .sec{scroll-margin-top:52px}
+}
+@media screen and (max-width:760px){
+  body{font-size:16px}
+  main{padding:0 16px}
+  .cover{padding:44px 0 32px}
+  .sec{padding:40px 0 16px}
+  table{font-size:.86rem}
+  th,td{padding:8px 10px}
+}
+@page{size:A4;margin:16mm 14mm}
+@media print{
+  :root{--bg:#fff;--ink:#17262b;--mut:#5a6a6f;--line:#d8dfe1;--soft:#f4f7f7;--p:#185359;--s:#2B7E6E;--v:#4B145F;--ps:#e7f0f0;--vs:#f2ebf5;--on:#fff}
+  body{font-size:10pt;overflow:visible}
+  .nav{display:none}
+  main{margin:0;padding:0}
+  .wrap{max-width:none}
+  .cover{padding:24mm 0 10mm}
+  .cover .back{display:none}
+  .sec{padding:8mm 0 4mm;border-bottom:0}
+  #a2,#a3,#a4,#a6{break-before:page}
+  .ex,tr,.quote{break-inside:avoid}
+  h2,h3,figcaption,.sec>header,.exn,.ext{break-after:avoid}
+  .tw{overflow:visible;border:0}
+  .w6,.w5,.w4,.w3{min-width:0}
+  table{font-size:8.5pt}
+  th,td{padding:6px 8px}
+  a{color:inherit;text-decoration:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav" aria-label="Apartados del anexo">
+  <p class="brand">Anexo de cumplimiento</p>
+  <a class="ext" href="index.html"><span class="n">←</span>Volver al playbook</a>
+  <a href="#a1" data-go="a1"><span class="n">A1</span>Tres ideas</a>
+  <a href="#a2" data-go="a2"><span class="n">A2</span>Lo que afecta a todos</a>
+  <a href="#a3" data-go="a3"><span class="n">A3</span>Lo que pide cada sector</a>
+  <a href="#a4" data-go="a4"><span class="n">A4</span>Del requisito a la capacidad</a>
+  <a href="#a5" data-go="a5"><span class="n">A5</span>Lo que nunca debes decir</a>
+  <a href="#a6" data-go="a6"><span class="n">A6</span>Fuentes</a>
+</nav>
+
+<main>
+<div class="wrap">
+
+<!-- PORTADA -->
+<header class="cover" id="portada">
+  <p class="eyebrow">Anexo de cumplimiento</p>
+  <h1>Playbook de ventas <span class="v">WOZTELL y VALNATIR</span></h1>
+  <p class="sub">Para preventa, y para el comercial que quiera el detalle de una norma antes de una reunión.</p>
+  <p class="back"><a href="index.html">← Volver al playbook</a></p>
+</header>
+
+<section class="sec" id="intro">
+  <p class="txt">Este anexo no es asesoramiento jurídico. El alcance de cada norma para un cliente concreto lo valora su organización con sus responsables.</p>
+  <p class="txt"><strong>Nada de lo que sigue cambia la regla del playbook:</strong> WOZTELL se vende en todos los sectores y VALNATIR se presenta solo con señal. Las normas explican por qué el cliente emite la señal. No son un argumento para sacarla tú.</p>
+  <p class="note">Fecha de consulta de todas las fuentes: 6 de octubre de 2026. Las referencias [n] remiten a la <a href="#a6" data-go="a6">lista final</a>.</p>
+</section>
+
+<!-- A1 -->
+<section class="sec" id="a1">
+  <header>
+    <p class="num">A1</p>
+    <h2>Tres ideas</h2>
+  </header>
+  <ul class="ideas">
+    <li><strong>La responsabilidad no se delega al canal.</strong> Si una conversación trata datos personales, la organización responde de ella, aunque ocurra en WhatsApp. El Reglamento General de Protección de Datos le obliga a aplicar una seguridad adecuada al riesgo (art. 32) y a poder demostrar que cumple (art. 24) <a class="ref" href="#a6" data-go="a6">[1]</a>. Que el chat sea «informal» no cambia esa obligación.</li>
+    <li><strong>Prohibir no basta.</strong> El 23 de agosto de 2023, el regulador británico de la energía, Ofgem, multó a Morgan Stanley &amp; Co. International plc con 5.411.149 libras. Sus operadores habían hablado de operaciones por WhatsApp en móviles personales entre enero de 2018 y marzo de 2020. El banco tenía una política escrita que lo prohibía. El regulador concluyó que no tomó medidas suficientes para que se cumpliera <a class="ref" href="#a6" data-go="a6">[2]</a>.</li>
+    <li><strong>La exigencia llega por tres vías.</strong> La ley, el supervisor del sector y el contrato con un cliente grande, la matriz, un financiador o un pliego. Muchas veces la tercera llega antes que las otras dos.</li>
+  </ul>
+
+  <figure class="ex" id="exa1">
+    <figcaption><span class="exn">Exhibit A1</span><span class="ext">La exigencia llega por tres vías, y cada una se reconoce por una señal distinta</span></figcaption>
+    <div class="tw">
+    <table class="w4">
+      <thead><tr><th>Vía</th><th>Quién exige</th><th>Qué exige, en simple</th><th>Cómo la reconoces en la reunión</th></tr></thead>
+      <tbody>
+        <tr><th>La ley</th><td>El legislador europeo y el español</td><td>Proteger los datos personales, avisar cuando atiende una IA, guardar la confidencialidad de quien denuncia.</td><td>Entra el responsable de protección de datos. Preguntan dónde se guardan las conversaciones y quién las lee.</td></tr>
+        <tr><th>El supervisor</th><td>El regulador de cada sector</td><td>Registrar, conservar y poder entregar las comunicaciones. Controlar a los proveedores tecnológicos.</td><td>«El regulador me pide conservar las comunicaciones.» Entra cumplimiento.</td></tr>
+        <tr><th>El contrato</th><td>Un cliente grande, la matriz, un financiador o un pliego</td><td>Garantías de seguridad, de alojamiento de los datos, de auditoría y de salida.</td><td>Llega un cuestionario de seguridad, un pliego o una cláusula que no sabes responder.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="src">Fuente: elaboración propia a partir de las normas citadas en los exhibits A2 y A3.</p>
+  </figure>
+
+  <div class="quote">
+    <p class="k">En la reunión</p>
+    <p>Cuando el cliente pregunte por control, no contestes con normas. Pregunta: «¿Quién te lo pide: la ley, tu supervisor o un cliente?». La respuesta te dice qué vía es y qué tiene que preparar preventa.</p>
+  </div>
+</section>
+
+<!-- A2 -->
+<section class="sec" id="a2">
+  <header>
+    <p class="num">A2</p>
+    <h2>Lo que afecta a todos</h2>
+  </header>
+  <p class="txt">Seis normas afectan a cualquier cliente. Se agrupan en tres bloques: las que protegen los datos de las personas, las que regulan el uso del canal y las que obligan a la organización por dentro. La de publicidad se resuelve siempre con WOZTELL. Las otras cinco pueden estar detrás de una señal; que lo estén depende de lo que pida el cliente.</p>
+
+  <figure class="ex" id="exa2">
+    <figcaption><span class="exn">Exhibit A2</span><span class="ext">Seis normas afectan a todos; cinco pueden estar detrás de una señal del cliente</span></figcaption>
+    <div class="tw">
+    <table class="w6">
+      <thead><tr><th>Bloque</th><th>Norma</th><th>Qué exige, en simple</th><th>Qué significa para su mensajería</th><th>Señal que la delata</th><th>A dónde lleva</th></tr></thead>
+      <tbody>
+        <tr><td class="grp" rowspan="2">Datos de las personas</td><td><strong>Protección de datos</strong><br>Reglamento General de Protección de Datos, arts. 5, 24 y 32 <a class="ref" href="#a6" data-go="a6">[1]</a></td><td>Tratar solo los datos necesarios, con una base legal, con seguridad adecuada al riesgo. Poder demostrarlo.</td><td>Un chat con clientes es un tratamiento de datos. La organización responde de él.</td><td>«¿Dónde se guardan?» «¿Quién las lee?»</td><td class="to">Responde con WOZTELL. Si pide más, VALNATIR.</td></tr>
+        <tr><td><strong>Datos sensibles</strong><br>Reglamento General de Protección de Datos, art. 9 <a class="ref" href="#a6" data-go="a6">[1]</a></td><td>Los datos de salud y otras categorías especiales están prohibidos salvo excepciones. Piden más garantías.</td><td>Un parte de lesiones o un informe médico en un chat abierto es un riesgo alto.</td><td>Quiere tratar salud o expedientes delicados por chat.</td><td class="to">WOZTELL si el cliente no pide más. VALNATIR si es él quien pide más control.</td></tr>
+        <tr><td class="grp" rowspan="2">Uso del canal</td><td><strong>Publicidad</strong><br>Ley de servicios de la sociedad de la información, art. 21 <a class="ref" href="#a6" data-go="a6">[3]</a></td><td>No enviar publicidad por medios electrónicos sin autorización previa. Hay excepción para clientes, sobre productos similares.</td><td>Afecta a las campañas.</td><td>Pregunta por permisos y bajas.</td><td class="to">WOZTELL lo resuelve.</td></tr>
+        <tr><td><strong>Inteligencia artificial</strong><br>Reglamento de IA, art. 50 <a class="ref" href="#a6" data-go="a6">[4]</a></td><td>Desde el 2 de agosto de 2026, la persona debe saber que habla con una IA. La revisión del reglamento no ha retrasado esta obligación.</td><td>Todo asistente que atiende por chat se identifica como IA.</td><td>«Queremos IA, pero el comité de riesgos no deja que toque datos de clientes.»</td><td class="to">El aviso se resuelve en WOZTELL. El freno del comité lleva a VALNATIR.</td></tr>
+        <tr><td class="grp" rowspan="2">La organización por dentro</td><td><strong>Canal de denuncias</strong><br>Ley 2/2023, arts. 5, 10 y 33 <a class="ref" href="#a6" data-go="a6">[5]</a></td><td>Las empresas de 50 o más trabajadores deben tener un sistema interno de información. Debe guardar la confidencialidad de quien informa y de las personas mencionadas.</td><td>Un chat corriente no ofrece por sí solo esa confidencialidad.</td><td>«Queremos que se pueda denunciar por WhatsApp.»</td><td class="to">VALNATIR, con preventa.</td></tr>
+        <tr><td><strong>Ciberseguridad</strong><br>Directiva NIS2 <a class="ref" href="#a6" data-go="a6">[6]</a></td><td>Gestionar los riesgos y controlar la cadena de proveedores en sectores críticos.</td><td>A 6 de octubre de 2026, España no ha publicado la ley que la incorpora. La Comisión Europea la llevó por ello ante el Tribunal de Justicia en julio de 2026. Los clientes grandes ya la trasladan a sus proveedores por contrato.</td><td>Llega un cuestionario de seguridad de proveedor.</td><td class="to">Preventa, el mismo día.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="src">Fuente: Reglamento (UE) 2016/679; Ley 34/2002; Reglamento (UE) 2024/1689 y preguntas frecuentes de la Comisión Europea; Ley 2/2023; Directiva (UE) 2022/2555 y Representación de la Comisión Europea en España (9 de julio de 2026).</p>
+  </figure>
+</section>
+
+<!-- A3 -->
+<section class="sec" id="a3">
+  <header>
+    <p class="num">A3</p>
+    <h2>Lo que pide cada sector</h2>
+  </header>
+  <p class="txt">WOZTELL se vende en los diez sectores y tiene clientes en todos. La tabla no dice dónde sirve WOZTELL. Dice qué norma o qué regla suele estar detrás cuando el cliente de ese sector emite una señal.</p>
+  <p class="txt">Los sectores se ordenan por su motor principal. En tres, un supervisor exige registro. En cuatro, la ley protege a la persona y su expediente. En tres, mandan las reglas del negocio: el secreto comercial, la exigencia de un cliente o de la matriz, la política interna y la reputación.</p>
+
+  <figure class="ex" id="exa3">
+    <figcaption><span class="exn">Exhibit A3</span><span class="ext">En tres sectores manda el supervisor, en cuatro la protección de la persona y en tres las reglas del negocio</span></figcaption>
+    <div class="tw">
+    <table class="w6">
+      <thead><tr><th>Motor principal</th><th>Sector</th><th>Norma o regla de referencia</th><th>Qué exige, en simple</th><th>Qué significa para su mensajería</th></tr></thead>
+      <tbody>
+        <tr><td class="grp" rowspan="3">El supervisor<span>exige registro</span></td><th>Banca y finanzas</th><td>MiFID II, art. 16.7 <a class="ref" href="#a6" data-go="a6">[7]</a> · DORA, art. 30 <a class="ref" href="#a6" data-go="a6">[8]</a></td><td>Grabar las comunicaciones que pueden acabar en una operación, aunque no se cierre. Conservarlas cinco años, y hasta siete si lo pide el supervisor. El supervisor europeo incluye el chat y la mensajería instantánea. Desde el 17 de enero de 2025, los contratos con proveedores tecnológicos deben fijar dónde están los datos, el derecho de auditoría y la salida.</td><td>La conversación con el gestor debe quedar registrada. El móvil personal es el punto débil.</td></tr>
+        <tr><th>Seguros</th><td>DORA <a class="ref" href="#a6" data-go="a6">[8]</a> · Reglamento General de Protección de Datos, art. 9 <a class="ref" href="#a6" data-go="a6">[1]</a></td><td>Las aseguradoras también están sujetas a DORA. Un siniestro con lesiones trata datos de salud.</td><td>La conversación de un siniestro es prueba y contiene datos sensibles.</td></tr>
+        <tr><th>Energía y suministros</th><td>REMIT <a class="ref" href="#a6" data-go="a6">[9]</a></td><td>Prohíbe el abuso de mercado en la compraventa mayorista de energía. Obliga a comunicar las operaciones y a vigilar las sospechosas. En el Reino Unido, la norma que lo aplica obliga además a grabar esas comunicaciones: es la que incumplió Morgan Stanley <a class="ref" href="#a6" data-go="a6">[2]</a>.</td><td>La mesa de compraventa necesita un canal controlado. Los avisos a clientes son otro asunto.</td></tr>
+        <tr><td class="grp" rowspan="4">La ley protege<span>a la persona y su expediente</span></td><th>Salud</th><td>Reglamento General de Protección de Datos, art. 9 <a class="ref" href="#a6" data-go="a6">[1]</a> · Ley 41/2002, arts. 7 y 14 a 17 <a class="ref" href="#a6" data-go="a6">[10]</a></td><td>Confidencialidad de todo dato de salud. Constancia en la historia clínica, que se conserva al menos cinco años desde el alta.</td><td>Todo contacto con un paciente es un dato de salud, también pedir una cita. No hay conversaciones «menores». El nivel de control lo decide el centro.</td></tr>
+        <tr><th>Administración pública</th><td>Esquema Nacional de Seguridad, Real Decreto 311/2022, arts. 2 y 38 <a class="ref" href="#a6" data-go="a6">[11]</a> · Ley 39/2015, art. 70 <a class="ref" href="#a6" data-go="a6">[12]</a></td><td>El Esquema obliga también al proveedor privado que presta servicio a la Administración. Los sistemas de categoría media o alta pasan una auditoría para certificar su conformidad. Todo procedimiento deja un expediente ordenado.</td><td>Los pliegos suelen pedir conformidad con el Esquema, alojamiento de los datos y expediente.</td></tr>
+        <tr><th>Seguridad y emergencias</th><td>Normativa procesal y de protección de datos</td><td>Confidencialidad, disponibilidad y custodia de la prueba.</td><td>Lo que se dice puede acabar ante un juez.</td></tr>
+        <tr><th>Educación</th><td>Ley Orgánica 3/2018, art. 7 <a class="ref" href="#a6" data-go="a6">[13]</a></td><td>El menor consiente por sí mismo desde los 14 años. Por debajo, consienten los padres o tutores.</td><td>Los datos de un alumno menor piden un cuidado especial.</td></tr>
+        <tr><td class="grp" rowspan="3">Mandan las reglas<span>del negocio</span></td><th>Comercio y venta online</th><td>Ley 34/2002, art. 21 <a class="ref" href="#a6" data-go="a6">[3]</a> · PCI DSS <a class="ref" href="#a6" data-go="a6">[14]</a></td><td>Autorización para la publicidad. La norma de las tarjetas no prohíbe recibir la tarjeta por chat, pero entonces el canal entra en su alcance.</td><td>Mejor el pago integrado que pedir la tarjeta por chat. La señal llega con clientes de alto valor o por exigencia de la matriz.</td></tr>
+        <tr><th>Empresa e industria</th><td>Secreto comercial y contratos</td><td>Proteger precios, diseños y planos. Cumplir lo que impone el cliente grande.</td><td>El requisito llega por contrato, no por ley.</td></tr>
+        <tr><th>Entidades sociales</th><td>Reglamento General de Protección de Datos <a class="ref" href="#a6" data-go="a6">[1]</a> y requisitos de los financiadores</td><td>Proteger a donantes y a personas vulnerables.</td><td>El riesgo es sobre todo de reputación.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="src">Fuente: Directiva 2014/65/UE y preguntas y respuestas de ESMA; Reglamento (UE) 2022/2554; Reglamento (UE) n.º 1227/2011; Ofgem (23 de agosto de 2023); Ley 41/2002; Real Decreto 311/2022; Ley 39/2015; Ley Orgánica 3/2018; Ley 34/2002; PCI Security Standards Council, pregunta frecuente 1310.</p>
+  </figure>
+
+  <p class="big">En un sector sin supervisor, escucha cuatro palabras: secreto, cliente grande, matriz y reputación.</p>
+</section>
+
+<!-- A4 -->
+<section class="sec" id="a4">
+  <header>
+    <p class="num">A4</p>
+    <h2>Del requisito a la capacidad</h2>
+  </header>
+  <p class="txt">Todas las exigencias anteriores se reducen a cinco requisitos. VALNATIR tiene una capacidad para cada uno. En ninguno sustituye al cliente: ayuda a cumplir, no cumple por él. Usa la tabla para orientar, no para prometer. El alcance exacto lo confirma preventa.</p>
+
+  <figure class="ex" id="exa4">
+    <figcaption><span class="exn">Exhibit A4</span><span class="ext">Cinco requisitos resumen lo que piden las normas; VALNATIR ayuda en los cinco y no sustituye al cliente en ninguno</span></figcaption>
+    <div class="tw">
+    <table class="w5">
+      <thead><tr><th>Lo que pide la norma</th><th>Normas que lo piden</th><th class="cv">Capacidad de VALNATIR que ayuda</th><th>Lo que sigue siendo tarea del cliente</th></tr></thead>
+      <tbody>
+        <tr><th>1. Conservar y poder demostrar</th><td>MiFID II · REMIT · Ley 39/2015 · Ley 41/2002</td><td class="cap">Registro de quién dijo qué, quién accedió y qué se decidió. Expediente que se cierra y se archiva. El empleado conserva su número y la conversación pasa a ser de la organización.</td><td>Fijar los plazos de conservación según su norma.</td></tr>
+        <tr><th>2. Proteger los datos sensibles</th><td>Reglamento General de Protección de Datos, arts. 9 y 32 · Ley 41/2002 · Ley Orgánica 3/2018</td><td class="cap">Sala segura. Datos personales ocultos, visibles solo para quien tiene permiso. Acceso limitado para terceros, que se retira al terminar.</td><td>Decidir la base legal y hacer su evaluación de riesgos.</td></tr>
+        <tr><th>3. Controlar al proveedor tecnológico</th><td>DORA, art. 30 · NIS2 · contratos y pliegos</td><td class="cap">Alojamiento de los datos en Europa. Clave de cifrado propia por organización. Registro de accesos. Proyecto acompañado por un especialista.</td><td>Negociar las cláusulas con su equipo legal.</td></tr>
+        <tr><th>4. Usar la IA con garantías</th><td>Reglamento de IA, art. 50 · Reglamento General de Protección de Datos</td><td class="cap">La IA trabaja con la cuenta propia de la organización y con los datos personales ocultos.</td><td>Asegurar que su asistente avisa a la persona de que es una IA.</td></tr>
+        <tr><th>5. Cumplir el marco del sector público y del canal de denuncias</th><td>Esquema Nacional de Seguridad · Ley 2/2023</td><td class="cap">Sala segura y acceso limitado para tratar una denuncia. Alojamiento en Europa y registro de accesos.</td><td>Comprobar qué pide exactamente su pliego sobre el Esquema Nacional de Seguridad; preventa lo responde por escrito. Organizar su sistema interno de información completo.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="src">Fuente: elaboración propia a partir de las normas de los exhibits A2 y A3 y de las capacidades de VALNATIR.</p>
+  </figure>
+
+  <div class="quote">
+    <p class="k">En la reunión</p>
+    <p>Cuando el cliente nombre una norma, tradúcela a uno de los cinco requisitos y di una sola frase: «VALNATIR te ayuda con eso; el alcance exacto para tu caso lo vemos con el especialista». No vayas más lejos.</p>
+  </div>
+</section>
+
+<!-- A5 -->
+<section class="sec" id="a5">
+  <header>
+    <p class="num">A5</p>
+    <h2>Lo que nunca debes decir</h2>
+  </header>
+  <p class="txt">Las cinco frases tienen el mismo defecto: prometen más de lo que una herramienta puede dar, o menos de lo que WOZTELL da. Para cada una hay una frase correcta.</p>
+
+  <figure class="ex" id="exa5">
+    <figcaption><span class="exn">Exhibit A5</span><span class="ext">Cada frase prohibida tiene una frase correcta que sí puedes decir</span></figcaption>
+    <div class="tw">
+    <table class="w5">
+      <thead><tr><th>Sobre qué</th><th>No digas</th><th>Di</th><th>Por qué</th></tr></thead>
+      <tbody>
+        <tr><th>El cumplimiento</th><td class="no">«Con VALNATIR cumples la protección de datos, DORA o el Esquema Nacional de Seguridad.»</td><td class="si">«VALNATIR te ayuda a cumplir. El cumplimiento lo decide tu organización con sus responsables.»</td><td>Ninguna herramienta cumple por el cliente.</td></tr>
+        <tr><th>La certificación</th><td class="no">«Está certificado» o «diseñado conforme al Esquema Nacional de Seguridad».</td><td class="si">«Lo que pide tu pliego lo responde nuestro especialista, por escrito.»</td><td>Ni el comercial ni el playbook afirman conformidad. Lo que el pliego exija lo responde preventa, con el detalle real y por escrito.</td></tr>
+        <tr><th>El cifrado</th><td class="no">«Es cifrado de extremo a extremo.»</td><td class="si">«VALNATIR no compite en eso. Un cifrado así impide a tu propia organización revisar, moderar y conservar.»</td><td>VALNATIR da a la organización el control de la conversación: revisar, conservar y demostrar.</td></tr>
+        <tr><th>WOZTELL</th><td class="no">«WOZTELL no vale para tu sector.»</td><td class="si">«WOZTELL resuelve lo que me pedías. Lo que planteas ahora es otra necesidad.»</td><td>WOZTELL se vende en todos los sectores, también en los regulados.</td></tr>
+        <tr><th>El miedo a la multa</th><td class="no">«En Estados Unidos multan a todo el mundo.»</td><td class="si">«En Europa la obligación es conservar y poder demostrar. ¿Te lo está pidiendo alguien?»</td><td>El supervisor de valores de Estados Unidos impuso 2.300 millones de dólares en 95 casos desde su ejercicio fiscal 2022 por no conservar mensajes fuera de los canales oficiales. En abril de 2026, la propia comisión calificó ese enfoque de interpretación errónea de la ley <a class="ref" href="#a6" data-go="a6">[15]</a>. El argumento del miedo ya no se sostiene; el de la obligación, sí.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="src">Fuente: reglas comerciales del grupo; Securities and Exchange Commission, nota de prensa 2026-34 (7 de abril de 2026).</p>
+  </figure>
+
+  <p class="txt">Si dudas de una frase, no la digas. Di: «Eso te lo confirma nuestro especialista» y avisa a preventa. <strong>Contacto de preventa VALNATIR: [pendiente de indicar].</strong></p>
+</section>
+
+<!-- A6 -->
+<section class="sec" id="a6">
+  <header>
+    <p class="num">A6</p>
+    <h2>Fuentes</h2>
+  </header>
+  <div class="tw">
+  <table class="refs w5">
+    <thead><tr><th>N.º</th><th>Título</th><th>Entidad</th><th>Enlace</th><th>Fecha de la fuente</th></tr></thead>
+    <tbody>
+      <tr><td class="n">1</td><td>Reglamento (UE) 2016/679, Reglamento General de Protección de Datos (arts. 5, 9, 24 y 32)</td><td>Unión Europea, EUR-Lex</td><td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">eur-lex.europa.eu/eli/reg/2016/679/oj</a></td><td>27-04-2016</td></tr>
+      <tr><td class="n">2</td><td>Ofgem fines Morgan Stanley &amp; Co. International plc (MSIP) over £5.4m for failure to record and retain electronic trading communications</td><td>Ofgem</td><td><a href="https://www.ofgem.gov.uk/press-release/ofgem-fines-morgan-stanley-co-international-plc-msip-over-ps54m-failure-record-and-retain-electronic-trading-communications">ofgem.gov.uk/press-release/ofgem-fines-morgan-stanley-…</a></td><td>23-08-2023</td></tr>
+      <tr><td class="n">3</td><td>Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (art. 21), texto consolidado</td><td>Boletín Oficial del Estado</td><td><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758">boe.es/buscar/act.php?id=BOE-A-2002-13758</a></td><td>11-07-2002</td></tr>
+      <tr><td class="n">4</td><td>Transparency obligations under Article 50 of the AI Act (preguntas frecuentes) · Reglamento (UE) 2024/1689 (arts. 50 y 113)</td><td>Comisión Europea · EUR-Lex</td><td><a href="https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act">digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act</a> · <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">eur-lex.europa.eu/eli/reg/2024/1689/oj</a></td><td>2026 · 13-06-2024</td></tr>
+      <tr><td class="n">5</td><td>Ley 2/2023, reguladora de la protección de las personas que informen sobre infracciones normativas y de lucha contra la corrupción (arts. 5, 10 y 33), texto consolidado</td><td>Boletín Oficial del Estado</td><td><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2023-4513">boe.es/buscar/act.php?id=BOE-A-2023-4513</a></td><td>20-02-2023</td></tr>
+      <tr><td class="n">6</td><td>Paquete de infracciones del mes de julio: decisiones relativas a España · Directiva (UE) 2022/2555 (NIS2)</td><td>Representación de la Comisión Europea en España · EUR-Lex</td><td><a href="https://spain.representation.ec.europa.eu/noticias-eventos/noticias-0/paquete-de-infracciones-del-mes-de-julio-decisiones-relativas-espana-2026-07-09_es">spain.representation.ec.europa.eu/…/paquete-de-infracciones-del-mes-de-julio-decisiones-relativas-espana-2026-07-09_es</a> · <a href="https://eur-lex.europa.eu/eli/dir/2022/2555/oj">eur-lex.europa.eu/eli/dir/2022/2555/oj</a></td><td>09-07-2026 · 14-12-2022</td></tr>
+      <tr><td class="n">7</td><td>Directiva 2014/65/UE (MiFID II), art. 16.7, texto consolidado a 17-01-2025 · Questions and Answers on MiFID II and MiFIR investor protection and intermediaries topics (grabación de comunicaciones)</td><td>Unión Europea, EUR-Lex · ESMA</td><td><a href="https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:02014L0065-20250117">eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:02014L0065-20250117</a> · <a href="https://www.esma.europa.eu/sites/default/files/library/esma35-43-349_mifid_ii_qas_on_investor_protection_topics.pdf">esma.europa.eu/…/esma35-43-349_mifid_ii_qas_on_investor_protection_topics.pdf</a></td><td>15-05-2014 (consolidado 17-01-2025)</td></tr>
+      <tr><td class="n">8</td><td>Reglamento (UE) 2022/2554 (DORA), arts. 2, 30 y 64</td><td>Unión Europea, EUR-Lex</td><td><a href="https://eur-lex.europa.eu/eli/reg/2022/2554/oj">eur-lex.europa.eu/eli/reg/2022/2554/oj</a></td><td>14-12-2022</td></tr>
+      <tr><td class="n">9</td><td>Reglamento (UE) n.º 1227/2011 (REMIT), arts. 3, 4, 5, 8 y 15, modificado por el Reglamento (UE) 2024/1106</td><td>Unión Europea, EUR-Lex</td><td><a href="https://eur-lex.europa.eu/eli/reg/2011/1227/oj">eur-lex.europa.eu/eli/reg/2011/1227/oj</a> · <a href="https://eur-lex.europa.eu/eli/reg/2024/1106/oj">eur-lex.europa.eu/eli/reg/2024/1106/oj</a></td><td>25-10-2011 · 11-04-2024</td></tr>
+      <tr><td class="n">10</td><td>Ley 41/2002, básica reguladora de la autonomía del paciente (arts. 7 y 14 a 17), texto consolidado</td><td>Boletín Oficial del Estado</td><td><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2002-22188">boe.es/buscar/act.php?id=BOE-A-2002-22188</a></td><td>14-11-2002</td></tr>
+      <tr><td class="n">11</td><td>Real Decreto 311/2022, por el que se regula el Esquema Nacional de Seguridad (arts. 2, 31 y 38), texto consolidado</td><td>Boletín Oficial del Estado</td><td><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191">boe.es/buscar/act.php?id=BOE-A-2022-7191</a></td><td>03-05-2022</td></tr>
+      <tr><td class="n">12</td><td>Ley 39/2015, del Procedimiento Administrativo Común de las Administraciones Públicas (art. 70), texto consolidado</td><td>Boletín Oficial del Estado</td><td><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2015-10565">boe.es/buscar/act.php?id=BOE-A-2015-10565</a></td><td>01-10-2015</td></tr>
+      <tr><td class="n">13</td><td>Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales (art. 7), texto consolidado</td><td>Boletín Oficial del Estado</td><td><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673">boe.es/buscar/act.php?id=BOE-A-2018-16673</a></td><td>05-12-2018</td></tr>
+      <tr><td class="n">14</td><td>FAQ 1310 (uso de mensajería de usuario final para datos de tarjeta)</td><td>PCI Security Standards Council</td><td><a href="https://www.pcisecuritystandards.org/faqs/1310/">pcisecuritystandards.org/faqs/1310/</a></td><td>Sin fecha en la fuente</td></tr>
+      <tr><td class="n">15</td><td>SEC Announces Enforcement Results for Fiscal Year 2025 (nota de prensa 2026-34)</td><td>U.S. Securities and Exchange Commission</td><td><a href="https://www.sec.gov/newsroom/press-releases/2026-34">sec.gov/newsroom/press-releases/2026-34</a></td><td>07-04-2026</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<footer>
+  <p><a href="index.html">← Volver al playbook</a></p>
+  <p><strong>Uso interno del equipo de ventas. No distribuir a clientes. Versión 1.0.0.</strong></p>
+  <p>Este anexo no es asesoramiento jurídico.</p>
+</footer>
+
+</div>
+</main>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  var links=Array.prototype.slice.call(document.querySelectorAll('a[data-go]'));
+  var navLinks=links.filter(function(a){return nav.contains(a);});
+  function go(id){
+    var el=document.getElementById(id);
+    if(!el)return;
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    try{el.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});}
+    catch(e){el.scrollIntoView(true);}
+    try{history.replaceState(null,'','#'+id);}catch(e){}
+  }
+  links.forEach(function(a){
+    a.addEventListener('click',function(ev){
+      ev.preventDefault();
+      go(a.getAttribute('data-go'));
+    });
+  });
+  function mark(id){
+    navLinks.forEach(function(a){
+      var on=a.getAttribute('data-go')===id;
+      a.classList.toggle('on',on);
+      if(on){
+        a.setAttribute('aria-current','true');
+        if(nav.scrollWidth>nav.clientWidth){
+          var left=a.offsetLeft-(nav.clientWidth-a.offsetWidth)/2;
+          try{nav.scrollTo({left:left,behavior:'smooth'});}catch(e){nav.scrollLeft=left;}
+        }
+      }else{a.removeAttribute('aria-current');}
+    });
+  }
+  var ids=navLinks.map(function(a){return a.getAttribute('data-go');});
+  var secs=ids.map(function(id){return document.getElementById(id);}).filter(Boolean);
+  if('IntersectionObserver' in window){
+    var visible={};
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){visible[e.target.id]=e.isIntersecting;});
+      for(var i=0;i<secs.length;i++){if(visible[secs[i].id]){mark(secs[i].id);return;}}
+    },{rootMargin:'-20% 0px -70% 0px',threshold:0});
+    secs.forEach(function(s){io.observe(s);});
+  }
+  if(location.hash){var h=location.hash.slice(1);if(document.getElementById(h)){setTimeout(function(){go(h);},0);}}
+})();
+</script>
+</body>
+</html>
